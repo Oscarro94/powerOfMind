@@ -1,0 +1,132 @@
+:root {
+    --yellow: #ffc600;
+  }
+
+  html {
+    color: #444;
+    font-family: Cambria, Cochin, Georgia, 'Times New Roman', Times, serif;
+    font-size: 20px;
+  }
+
+  p {
+    line-height: 1.8;
+  }
+
+  img {
+    max-width: 100%;
+  }
+
+  a {
+    color: black;
+    text-decoration: underline wavy var(--yellow);
+  }
+
+  h1,
+  h2 {
+    font-size: 80px;
+    font-style: italic;
+    font-weight: 100;
+    margin: 0;
+  }
+
+  .post h2{
+    text-align: left;
+  }
+
+  .post {
+    display: grid;
+    max-width: 1000px;
+    margin: 200px auto;
+    grid-gap: 10px 50px;
+    grid-template-columns: 3fr 12fr 4fr; 
+    text-align: justify;
+  }
+
+
+  .post>* {
+    grid-column: 2 / -2;
+  }
+
+  .post>figure {
+    margin: 0;
+  }
+
+  figcaption {
+    font-size: 10px;
+  }
+
+  .post>blockquote {
+    grid-column: 1 / -1;
+    font-size: 50px;
+    font-style: italic;
+    text-align: center;
+    margin: 0;
+  }
+
+
+  .tip {
+    background: #FAFAFA;
+    padding: 10px;
+    grid-row: span 5 ;
+    align-self: start;
+  }
+
+  .tip-left {
+    grid-column: 1 / span 1;
+    text-align: right;
+    border-right: 2px solid var(--yellow);
+  }
+
+  .tip-right {
+    grid-column: span 1 / -1;
+    border-left: 2px solid var(--yellow);
+    text-align: center;
+  } 
+
+  @media (max-width: 600px){
+    
+    .post{
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+        text-align: justify;
+    }
+
+    .post h2{
+        font-size: 50px;
+        text-align: center;
+    }
+
+    .tip {
+        background: #FAFAFA;
+        padding: 10px;
+        grid-row: span 5;
+        align-self:stretch;
+        text-align: center;
+      }
+
+    .tip-right {
+        grid-column: span 1 / -1;
+        border-left: 2px solid var(--yellow);
+        border-right: 2px solid var(--yellow);
+      
+      }
+
+      .tip p{
+        font-size: 20px;
+        font-style: italic;
+      }
+
+      .post > blockquote {
+        font-size: 20px;
+        font-style: italic;
+        text-align: center;
+        color: black;
+      }
+
+      #hi{
+        font-size: 40px;
+        font-style: italic;
+      }
+     
+    }
